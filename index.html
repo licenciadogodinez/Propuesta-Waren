@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warenhaus Props - Catálogo (Prototipo 2.0)</title>
+    <title>Warenhaus Props - Catálogo (Prototipo 3.0)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,56 +37,46 @@
 
         <section id="catalogo">
             <h2>Nuestro Catálogo</h2>
-            <p>Explora nuestras categorías y encuentra la pieza ideal para tu producción.</p>
-            
-            <h3>Mobiliario</h3>
-            <div class="prop-gallery">
-                <div class="prop-item">
-                    <h3>Sofá Chesterfield Clásico</h3>
-                    <img src="https://via.placeholder.com/300x200?text=Sofa+Chesterfield" alt="Sofá Chesterfield Clásico">
-                    <p>Elegante sofá de piel capitoné, ideal para ambientaciones sofisticadas, oficinas de época o sets de lujo.</p>
-                    <p><strong>Estilo:</strong> Clásico, Lujo</p>
-                    <p><strong>Dimensiones:</strong> 2.30m x 1.00m x 0.75m</p>
-                </div>
-                <div class="prop-item">
-                    <h3>Mesa de Centro Mid-Century</h3>
-                    <img src="https://via.placeholder.com/300x200?text=Mesa+Mid-Century" alt="Mesa de Centro Mid-Century">
-                    <p>Mesa baja de madera con diseño de mediados de siglo. Perfecta para salas modernas o espacios retro.</p>
-                    <p><strong>Estilo:</strong> Mid-Century, Moderno</p>
-                    <p><strong>Dimensiones:</strong> 1.20m x 0.60m x 0.40m</p>
-                </div>
+            <div class="catalog-controls">
+                <button id="toggle-grid">Vista Cuadrícula</button>
+                <button id="toggle-list">Vista Listado</button>
             </div>
 
-            <h3>Utilería</h3>
-            <div class="prop-gallery">
-                <div class="prop-item">
-                    <h3>Máquina de Escribir Antigua</h3>
-                    <img src="https://via.placeholder.com/300x200?text=Maq+Escribir" alt="Máquina de Escribir Antigua">
-                    <p>Máquina de escribir Royal de los años 40. Detalle auténtico para oficinas vintage, sets de periodismo o escenas de drama.</p>
-                    <p><strong>Estilo:</strong> Vintage, Época</p>
-                </div>
-                <div class="prop-item">
-                    <h3>Cámara Fotográfica Clásica</h3>
-                    <img src="https://via.placeholder.com/300x200?text=Camara+Clasica" alt="Cámara Fotográfica Clásica">
-                    <p>Réplica de cámara fotográfica de fuelle. Ideal para escenografías de estudio fotográfico antiguo o como utilería de época.</p>
-                    <p><strong>Estilo:</strong> Retro, Fotografía</p>
-                </div>
+            <div class="filters">
+                <select id="filter-type">
+                    <option value="all">Todos los Tipos</option>
+                    <option value="mobiliario">Mobiliario</option>
+                    <option value="utileria">Utilería</option>
+                    <option value="decoracion">Decoración</option>
+                </select>
+                <select id="filter-color">
+                    <option value="all">Todos los Colores</option>
+                    <option value="marrón">Marrón</option>
+                    <option value="madera">Madera</option>
+                    <option value="negro">Negro</option>
+                    <option value="varios">Varios</option>
+                </select>
+                <select id="filter-epoca">
+                    <option value="all">Todas las Épocas</option>
+                    <option value="clásico">Clásico</option>
+                    <option value="mid-century">Mid-Century</option>
+                    <option value="años 40">Años 40</option>
+                    <option value="años 50">Años 50</option>
+                    <option value="vintage">Vintage</option>
+                </select>
+                <select id="filter-uso">
+                    <option value="all">Todos los Usos</option>
+                    <option value="drama, lujo">Drama, Lujo</option>
+                    <option value="moderno, retro">Moderno, Retro</option>
+                    <option value="drama, vintage">Drama, Vintage</option>
+                    <option value="fotografía, época">Fotografía, Época</option>
+                    <option value="académico, aventura">Académico, Aventura</option>
+                    <option value="viajes, drama">Viajes, Drama</option>
+                </select>
             </div>
 
-            <h3>Decoración</h3>
-            <div class="prop-gallery">
-                <div class="prop-item">
-                    <h3>Globos Terráqueos Antiguos (Set de 3)</h3>
-                    <img src="https://via.placeholder.com/300x200?text=Globos+Terraqueos" alt="Globos Terráqueos Antiguos">
-                    <p>Colección de tres globos terráqueos con mapas antiguos. Añade un toque intelectual y explorador a cualquier espacio.</p>
-                    <p><strong>Estilo:</strong> Académico, Vintage</p>
-                </div>
-                <div class="prop-item">
-                    <h3>Juego de Maletas de Cuero</h3>
-                    <img src="https://via.placeholder.com/300x200?text=Maletas+Cuero" alt="Juego de Maletas de Cuero">
-                    <p>Conjunto de maletas de cuero vintage. Perfectas para escenas de viaje, estaciones de tren o ambientaciones de los años 50.</p>
-                    <p><strong>Estilo:</strong> Viajero, Vintage</p>
-                </div>
+            <div class="prop-gallery grid-view">
+                <!-- Los props se renderizarán aquí dinámicamente con JavaScript -->
             </div>
         </section>
 
@@ -103,5 +93,6 @@
     <footer>
         <p>&copy; 2026 Warenhaus Props. Todos los derechos reservados.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
